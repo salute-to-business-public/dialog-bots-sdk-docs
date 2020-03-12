@@ -1,0 +1,27 @@
+.. dialog-bot-sdk documentation master file, created by
+   sphinx-quickstart on Wed Feb 26 15:20:52 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to dialog-bot-sdk's documentation!
+==========================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   dialog_bot_sdk.content
+   dialog_bot_sdk.entities.media
+   dialog_bot_sdk.entities.message
+   dialog_bot_sdk.entities
+   dialog_bot_sdk.exceptions
+   dialog_bot_sdk.internal
+   dialog_bot_sdk
+   modules
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

@@ -1,0 +1,1131 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>dialog_bot_sdk package &#8212; dialog-bot-sdk 3.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dialog_bot_sdk" href="modules.html" />
+    <link rel="prev" title="dialog_bot_sdk.internal package" href="dialog_bot_sdk.internal.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dialog-bot-sdk-package">
+<h1>dialog_bot_sdk package<a class="headerlink" href="#dialog-bot-sdk-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dialog_bot_sdk.content.html">dialog_bot_sdk.content package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dialog_bot_sdk.content.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialog_bot_sdk.content.html#module-dialog_bot_sdk.content.content">dialog_bot_sdk.content.content module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialog_bot_sdk.content.html#module-dialog_bot_sdk.content">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dialog_bot_sdk.internal.html">dialog_bot_sdk.internal package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dialog_bot_sdk.internal.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialog_bot_sdk.internal.html#module-dialog_bot_sdk.internal.bot">dialog_bot_sdk.internal.bot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialog_bot_sdk.internal.html#module-dialog_bot_sdk.internal.service">dialog_bot_sdk.internal.service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialog_bot_sdk.internal.html#module-dialog_bot_sdk.internal">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dialog_bot_sdk.bot">
+<span id="dialog-bot-sdk-bot-module"></span><h2>dialog_bot_sdk.bot module<a class="headerlink" href="#module-dialog_bot_sdk.bot" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.bot.DialogBot">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.bot.</code><code class="sig-name descname">DialogBot</code><span class="sig-paren">(</span><em class="sig-param">channel: grpc._channel.Channel</em>, <em class="sig-param">bot_token: str = None</em>, <em class="sig-param">verbose: bool = False</em>, <em class="sig-param">cert=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">access_dir=None</em>, <em class="sig-param">options: dict = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.bot.DialogBot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Main Dialog Bot class.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.bot.DialogBot.get_insecure_bot">
+<em class="property">static </em><code class="sig-name descname">get_insecure_bot</code><span class="sig-paren">(</span><em class="sig-param">endpoint: str</em>, <em class="sig-param">bot_token: str</em>, <em class="sig-param">verbose: bool = False</em>, <em class="sig-param">options: dict = None</em>, <em class="sig-param">retry_options: dict = None</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.bot.DialogBot<a class="headerlink" href="#dialog_bot_sdk.bot.DialogBot.get_insecure_bot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Dialog bot with established gRPC insecure channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> – bot’s endpoint address</p></li>
+<li><p><strong>bot_token</strong> – bot’s token</p></li>
+<li><p><strong>verbose</strong> – verbosity level of functions calling</p></li>
+<li><p><strong>options</strong> – channel’s options</p></li>
+<li><p><strong>retry_options</strong> – dict of retries options (delay_factor, min_delay, max_delay, max_retries)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dialog bot instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.bot.DialogBot.get_secure_bot">
+<em class="property">static </em><code class="sig-name descname">get_secure_bot</code><span class="sig-paren">(</span><em class="sig-param">endpoint: str</em>, <em class="sig-param">credentials</em>, <em class="sig-param">bot_token: str</em>, <em class="sig-param">verbose: bool = False</em>, <em class="sig-param">options: dict = None</em>, <em class="sig-param">retry_options: dict = None</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.bot.DialogBot<a class="headerlink" href="#dialog_bot_sdk.bot.DialogBot.get_secure_bot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Dialog bot with established gRPC insecure channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> – bot’s endpoint address</p></li>
+<li><p><strong>credentials</strong> – SSL credentials</p></li>
+<li><p><strong>bot_token</strong> – bot’s token</p></li>
+<li><p><strong>verbose</strong> – verbosity level of functions calling</p></li>
+<li><p><strong>options</strong> – channel’s options</p></li>
+<li><p><strong>retry_options</strong> – dict of retries options (delay_factor, min_delay, max_delay, max_retries)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dialog bot instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.bot.DialogBot.get_secure_bot_with_pfx_certificate">
+<em class="property">static </em><code class="sig-name descname">get_secure_bot_with_pfx_certificate</code><span class="sig-paren">(</span><em class="sig-param">endpoint: str</em>, <em class="sig-param">pfx_certificate</em>, <em class="sig-param">pfx_password</em>, <em class="sig-param">verbose: bool = False</em>, <em class="sig-param">access_dir=None</em>, <em class="sig-param">options: dict = None</em>, <em class="sig-param">retry_options: dict = None</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.bot.DialogBot<a class="headerlink" href="#dialog_bot_sdk.bot.DialogBot.get_secure_bot_with_pfx_certificate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.entity_manager">
+<span id="dialog-bot-sdk-entity-manager-module"></span><h2>dialog_bot_sdk.entity_manager module<a class="headerlink" href="#module-dialog_bot_sdk.entity_manager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.entity_manager.EntityManager">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.entity_manager.</code><code class="sig-name descname">EntityManager</code><span class="sig-paren">(</span><em class="sig-param">internal: dialog_bot_sdk.internal.bot.InternalBot</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.entity_manager.EntityManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Entity manager class.</p>
+<p>Add OutPeer’s to dict when bot receive a message, to avoid going to the server once again.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.entity_manager.EntityManager.add_out_peer">
+<code class="sig-name descname">add_out_peer</code><span class="sig-paren">(</span><em class="sig-param">out_peer: peers_pb2.OutPeer</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.entity_manager.EntityManager.add_out_peer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adding OutPeers to peer_to_out_peer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>out_peer</strong> – OutPeer</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.entity_manager.EntityManager.get_out_peer">
+<code class="sig-name descname">get_out_peer</code><span class="sig-paren">(</span><em class="sig-param">peer: peers_pb2.Peer</em><span class="sig-paren">)</span> &#x2192; peers_pb2.OutPeer<a class="headerlink" href="#dialog_bot_sdk.entity_manager.EntityManager.get_out_peer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns OutPeer for given Peer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>peer</strong> – Peer</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>OutPeer</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.groups">
+<span id="dialog-bot-sdk-groups-module"></span><h2>dialog_bot_sdk.groups module<a class="headerlink" href="#module-dialog_bot_sdk.groups" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.groups.Groups">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.groups.</code><code class="sig-name descname">Groups</code><span class="sig-paren">(</span><em class="sig-param">manager: dialog_bot_sdk.entity_manager.EntityManager</em>, <em class="sig-param">internal: dialog_bot_sdk.internal.bot.InternalBot</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.groups.Groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#dialog_bot_sdk.service.ManagedService" title="dialog_bot_sdk.service.ManagedService"><code class="xref py py-class docutils literal notranslate"><span class="pre">dialog_bot_sdk.service.ManagedService</span></code></a></p>
+<p>Class for handling groups</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.create_private_channel">
+<code class="sig-name descname">create_private_channel</code><span class="sig-paren">(</span><em class="sig-param">title: str</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.Group.Group<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.create_private_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create private channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>title</strong> – title of group</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Group</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.create_private_group">
+<code class="sig-name descname">create_private_group</code><span class="sig-paren">(</span><em class="sig-param">title: str</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.Group.Group<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.create_private_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create private group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>title</strong> – title of group</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Group</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.create_public_channel">
+<code class="sig-name descname">create_public_channel</code><span class="sig-paren">(</span><em class="sig-param">title: str</em>, <em class="sig-param">short_name: str</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.Group.Group<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.create_public_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create public channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – title of group</p></li>
+<li><p><strong>short_name</strong> – group name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Group</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.create_public_group">
+<code class="sig-name descname">create_public_group</code><span class="sig-paren">(</span><em class="sig-param">title: str</em>, <em class="sig-param">short_name: str</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.Group.Group<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.create_public_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create public group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – title of group</p></li>
+<li><p><strong>short_name</strong> – group name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Group</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.edit_avatar">
+<code class="sig-name descname">edit_avatar</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">file: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.edit_avatar" title="Permalink to this definition">¶</a></dt>
+<dd><p>change group’s avatar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>file</strong> – file path</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Avatar</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.edit_group_about">
+<code class="sig-name descname">edit_group_about</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">about: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.edit_group_about" title="Permalink to this definition">¶</a></dt>
+<dd><p>change group’s “about”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located User)</p></li>
+<li><p><strong>about</strong> – about text</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.edit_group_title">
+<code class="sig-name descname">edit_group_title</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">title: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.edit_group_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>change group’s title</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>title</strong> – new title</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.find_group_by_id">
+<code class="sig-name descname">find_group_by_id</code><span class="sig-paren">(</span><em class="sig-param">group_id: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.find_group_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find and return Group by id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group_id</strong> – group’s</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Group or None if could not find</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.find_group_by_short_name">
+<code class="sig-name descname">find_group_by_short_name</code><span class="sig-paren">(</span><em class="sig-param">short_name: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.find_group_by_short_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find a Group by short_name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>short_name</strong> – short_name of group</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Group or None if could not find</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.get_group_invite_url">
+<code class="sig-name descname">get_group_invite_url</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.get_group_invite_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>return group’s invite url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>invite url</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.get_group_invite_url_base">
+<code class="sig-name descname">get_group_invite_url_base</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.get_group_invite_url_base" title="Permalink to this definition">¶</a></dt>
+<dd><p>return group’s invite url without token/short_name (example <a class="reference external" href="https://domain">https://domain</a>/&#64;)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>invite url (string)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.get_group_member_permissions">
+<code class="sig-name descname">get_group_member_permissions</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask, user_peers: List[dialog_bot_sdk.utils.AsyncTask]</em><span class="sig-paren">)</span> &#x2192; List[dialog_bot_sdk.entities.Permissions.Permissions]<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.get_group_member_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>return group member’s permissions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>user_peers</strong> – Peer or AsyncTask (in which located User)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>group member’s permissions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.invite_user">
+<code class="sig-name descname">invite_user</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">user_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.invite_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invite user in Group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>user_peer</strong> – Peer or AsyncTask (in which located User)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.join_group">
+<code class="sig-name descname">join_group</code><span class="sig-paren">(</span><em class="sig-param">token_or_url: str</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.Group.Group<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.join_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>join to group by token or invite url (used for private groups)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token_or_url</strong> – group’s token or invite url</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Group</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.join_group_by_peer">
+<code class="sig-name descname">join_group_by_peer</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.join_group_by_peer" title="Permalink to this definition">¶</a></dt>
+<dd><p>join to group by group’s peer (used for public groups)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.kick_user">
+<code class="sig-name descname">kick_user</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">user_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.kick_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kick user from Group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>user_peer</strong> – Peer or AsyncTask (in which located User)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.leave_group">
+<code class="sig-name descname">leave_group</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.leave_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>leave from group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.load_members">
+<code class="sig-name descname">load_members</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">limit: int = 0</em><span class="sig-paren">)</span> &#x2192; List[dialog_bot_sdk.entities.User.User]<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.load_members" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load Group members by peer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>limit</strong> – count members</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of User’s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.make_user_admin">
+<code class="sig-name descname">make_user_admin</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask, user_peer: dialog_bot_sdk.utils.AsyncTask, permissions: List[dialog_bot_sdk.entities.Permissions.GroupPermission]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.make_user_admin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set new user’s permissions (old permissions will be revoke)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>user_peer</strong> – Peer or AsyncTask (in which located User)</p></li>
+<li><p><strong>permissions</strong> – permissions list (for admin)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.remove_group_avatar">
+<code class="sig-name descname">remove_group_avatar</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.remove_group_avatar" title="Permalink to this definition">¶</a></dt>
+<dd><p>deleted group’s avatar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group_peer</strong> – Peer or AsyncTask (in which located User)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.revoke_invite_url">
+<code class="sig-name descname">revoke_invite_url</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.revoke_invite_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>revoke current invite url and return new group’s invite url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>invite url</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.set_default_group_permissions">
+<code class="sig-name descname">set_default_group_permissions</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">add_permissions: List[dialog_bot_sdk.entities.Permissions.GroupPermission] = None</em>, <em class="sig-param">del_permissions: List[dialog_bot_sdk.entities.Permissions.GroupPermission] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.set_default_group_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>add/del default group permissions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>add_permissions</strong> – list of permissions to add</p></li>
+<li><p><strong>del_permissions</strong> – list of permissions to delete</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.set_member_permissions">
+<code class="sig-name descname">set_member_permissions</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">user_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">add_permissions: List[dialog_bot_sdk.entities.Permissions.GroupPermission] = None</em>, <em class="sig-param">del_permissions: List[dialog_bot_sdk.entities.Permissions.GroupPermission] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.set_member_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>add/del group’s member permissions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>user_peer</strong> – Peer or AsyncTask (in which located User)</p></li>
+<li><p><strong>add_permissions</strong> – list of permissions to add</p></li>
+<li><p><strong>del_permissions</strong> – list of permissions to delete</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.groups.Groups.transfer_ownership">
+<code class="sig-name descname">transfer_ownership</code><span class="sig-paren">(</span><em class="sig-param">group_peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">user_peer: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.groups.Groups.transfer_ownership" title="Permalink to this definition">¶</a></dt>
+<dd><p>change group’s owner to user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_peer</strong> – Peer or AsyncTask (in which located Group)</p></li>
+<li><p><strong>user_peer</strong> – Peer or AsyncTask (in which located User)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.interactive_media">
+<span id="dialog-bot-sdk-interactive-media-module"></span><h2>dialog_bot_sdk.interactive_media module<a class="headerlink" href="#module-dialog_bot_sdk.interactive_media" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMedia">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.interactive_media.</code><code class="sig-name descname">InteractiveMedia</code><span class="sig-paren">(</span><em class="sig-param">media_id: str</em>, <em class="sig-param">widget: dialog_bot_sdk.interactive_media.InteractiveMediaButton</em>, <em class="sig-param">style: dialog_bot_sdk.entities.media.InteractiveMediaGroup.InteractiveMediaStyle = dialog_bot_sdk.entities.media.InteractiveMediaGroup.InteractiveMediaStyle.INTERACTIVEMEDIASTYLE_UNKNOWN</em>, <em class="sig-param">confirm: dialog_bot_sdk.interactive_media.InteractiveMediaConfirm = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMedia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Wrapper class for interactive object styling.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMedia.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param">target</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMedia.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render method for wrapped interactive object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – target interactive object</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wrapped interactive object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaButton">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.interactive_media.</code><code class="sig-name descname">InteractiveMediaButton</code><span class="sig-paren">(</span><em class="sig-param">value: str</em>, <em class="sig-param">label: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Button control class.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaButton.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param">target</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaButton.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render method for button</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – target button</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaConfirm">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.interactive_media.</code><code class="sig-name descname">InteractiveMediaConfirm</code><span class="sig-paren">(</span><em class="sig-param">text: str = None</em>, <em class="sig-param">title: str = None</em>, <em class="sig-param">ok: str = None</em>, <em class="sig-param">dismiss: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaConfirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Confirm control class.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaConfirm.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; messaging_pb2.InteractiveMediaConfirm<a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaConfirm.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render method for confirm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>confirm</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaGroup">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.interactive_media.</code><code class="sig-name descname">InteractiveMediaGroup</code><span class="sig-paren">(</span><em class="sig-param">actions: List[dialog_bot_sdk.interactive_media.InteractiveMedia], title: str = None, description: str = None, translations: List[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Wrapper class for interactive object grouping.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaGroup.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param">target</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaGroup.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render method for group of interactive objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – group of interactive objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaSelect">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.interactive_media.</code><code class="sig-name descname">InteractiveMediaSelect</code><span class="sig-paren">(</span><em class="sig-param">options: dict</em>, <em class="sig-param">label: str = None</em>, <em class="sig-param">default_value: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Select control class.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.interactive_media.InteractiveMediaSelect.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param">target</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.interactive_media.InteractiveMediaSelect.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render method for select</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – target select</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.messaging">
+<span id="dialog-bot-sdk-messaging-module"></span><h2>dialog_bot_sdk.messaging module<a class="headerlink" href="#module-dialog_bot_sdk.messaging" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.messaging.Messaging">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.messaging.</code><code class="sig-name descname">Messaging</code><span class="sig-paren">(</span><em class="sig-param">manager: dialog_bot_sdk.entity_manager.EntityManager</em>, <em class="sig-param">internal: dialog_bot_sdk.internal.bot.InternalBot</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#dialog_bot_sdk.service.ManagedService" title="dialog_bot_sdk.service.ManagedService"><code class="xref py py-class docutils literal notranslate"><span class="pre">dialog_bot_sdk.service.ManagedService</span></code></a></p>
+<p>Main messaging class.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">message: dialog_bot_sdk.utils.AsyncTask</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – Message or AsyncTask (in which located Message)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask, mids: List[dialog_bot_sdk.utils.AsyncTask], text: str = None, interactive_media_groups: List[dialog_bot_sdk.interactive_media.InteractiveMediaGroup] = None</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.UUID.UUID<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward messages to peer. Message can contain interactive media groups (buttons, selects etc.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>mids</strong> – list of UUIDs</p></li>
+<li><p><strong>text</strong> – message text</p></li>
+<li><p><strong>interactive_media_groups</strong> – groups of interactive media components (buttons etc.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>UUID (message id)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.get_messages_by_id">
+<code class="sig-name descname">get_messages_by_id</code><span class="sig-paren">(</span><em class="sig-param">mids: List[dialog_bot_sdk.utils.AsyncTask]</em><span class="sig-paren">)</span> &#x2192; List[dialog_bot_sdk.entities.message.Message.Message]<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.get_messages_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find and return messages by UUIDs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mids</strong> – list of UUID or AsyncTask (in which located UUID)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of Messages</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.load_message_history">
+<code class="sig-name descname">load_message_history</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">date: int = 0</em>, <em class="sig-param">direction: dialog_bot_sdk.entities.ListLoadMode.ListLoadMode = dialog_bot_sdk.entities.ListLoadMode.ListLoadMode.LISTLOADMODE_BACKWARD</em>, <em class="sig-param">limit: int = 2</em><span class="sig-paren">)</span> &#x2192; List[dialog_bot_sdk.entities.message.Message.Message]<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.load_message_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load and return messages by peer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>date</strong> – date of message</p></li>
+<li><p><strong>direction</strong> – ListLoadMode</p></li>
+<li><p><strong>limit</strong> – messages count</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of Messages</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.messages_read">
+<code class="sig-name descname">messages_read</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">date: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.messages_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Marking a message and all previous as read</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>date</strong> – date of message</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.on_message">
+<code class="sig-name descname">on_message</code><span class="sig-paren">(</span><em class="sig-param">callback</em>, <em class="sig-param">interactive_media_callback=None</em>, <em class="sig-param">raw_callback=None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.on_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Message receiving event handler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> – function that will be called when message received</p></li>
+<li><p><strong>interactive_media_callback</strong> – function that will be called when interactive media action is performed</p></li>
+<li><p><strong>raw_callback</strong> – function to handle any other type of update</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.on_message_async">
+<code class="sig-name descname">on_message_async</code><span class="sig-paren">(</span><em class="sig-param">callback</em>, <em class="sig-param">interactive_media_callback=None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.on_message_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Message receiving event handler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> – function that will be called when message received</p></li>
+<li><p><strong>interactive_media_callback</strong> – function that will be called when interactive media action is performed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.reply">
+<code class="sig-name descname">reply</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask, mids: List[dialog_bot_sdk.utils.AsyncTask], text: str = None, interactive_media_groups: List[dialog_bot_sdk.interactive_media.InteractiveMediaGroup] = None</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.UUID.UUID<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.reply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reply messages to peer. Message can contain interactive media groups (buttons, selects etc.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>mids</strong> – list of UUIDs</p></li>
+<li><p><strong>text</strong> – message text</p></li>
+<li><p><strong>interactive_media_groups</strong> – groups of interactive media components (buttons etc.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>UUID (message id)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dialog_bot_sdk.messaging.Messaging.retry">
+<code class="sig-name descname">retry</code><em class="property"> = 0</em><a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.retry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.send_file">
+<code class="sig-name descname">send_file</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">file: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.send_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send file to peer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>file</strong> – path to file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>UUID (message id)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.send_image">
+<code class="sig-name descname">send_image</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">file: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.send_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send image as image (not as file) to peer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>file</strong> – path to image file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>UUID (message id)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.send_media">
+<code class="sig-name descname">send_media</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask, medias: List[dialog_bot_sdk.entities.message.TextMessage.MessageMedia]</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.UUID.UUID<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.send_media" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send media to peer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>medias</strong> – medias (list of MessageMedias)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>UUID (message id)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.send_message">
+<code class="sig-name descname">send_message</code><span class="sig-paren">(</span><em class="sig-param">peer: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">text: str</em>, <em class="sig-param">interactive_media_groups: List[dialog_bot_sdk.interactive_media.InteractiveMediaGroup] = None</em>, <em class="sig-param">uid: int = None</em><span class="sig-paren">)</span> &#x2192; dialog_bot_sdk.entities.UUID.UUID<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.send_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send text message to peer.
+Message can contain interactive media groups (buttons, selects etc.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> – Peer or AsyncTask (in which located User or Group)</p></li>
+<li><p><strong>text</strong> – message text (not null)</p></li>
+<li><p><strong>interactive_media_groups</strong> – groups of interactive media components (buttons etc.)</p></li>
+<li><p><strong>uid</strong> – send message only for user by id</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>UUID (message id)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dialog_bot_sdk.messaging.Messaging.timer">
+<code class="sig-name descname">timer</code><em class="property"> = 0</em><a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.timer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.messaging.Messaging.update_message">
+<code class="sig-name descname">update_message</code><span class="sig-paren">(</span><em class="sig-param">message: dialog_bot_sdk.utils.AsyncTask</em>, <em class="sig-param">text: str</em>, <em class="sig-param">interactive_media_groups: List[dialog_bot_sdk.interactive_media.InteractiveMediaGroup] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.messaging.Messaging.update_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update text message or interactive media (buttons, selects etc.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – Message or AsyncTask (in which located Message)</p></li>
+<li><p><strong>text</strong> – message text (not null)</p></li>
+<li><p><strong>interactive_media_groups</strong> – groups of interactive media components (buttons etc.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.service">
+<span id="dialog-bot-sdk-service-module"></span><h2>dialog_bot_sdk.service module<a class="headerlink" href="#module-dialog_bot_sdk.service" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.service.ManagedService">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.service.</code><code class="sig-name descname">ManagedService</code><span class="sig-paren">(</span><em class="sig-param">manager: dialog_bot_sdk.entity_manager.EntityManager</em>, <em class="sig-param">internal: dialog_bot_sdk.internal.bot.InternalBot</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.service.ManagedService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for managed services.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.updates">
+<span id="dialog-bot-sdk-updates-module"></span><h2>dialog_bot_sdk.updates module<a class="headerlink" href="#module-dialog_bot_sdk.updates" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.updates.Updates">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.updates.</code><code class="sig-name descname">Updates</code><span class="sig-paren">(</span><em class="sig-param">manager: dialog_bot_sdk.entity_manager.EntityManager</em>, <em class="sig-param">internal: dialog_bot_sdk.internal.bot.InternalBot</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.updates.Updates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#dialog_bot_sdk.service.ManagedService" title="dialog_bot_sdk.service.ManagedService"><code class="xref py py-class docutils literal notranslate"><span class="pre">dialog_bot_sdk.service.ManagedService</span></code></a></p>
+<p>Class for handling grpc’s server updates.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.updates.Updates.get_difference">
+<code class="sig-name descname">get_difference</code><span class="sig-paren">(</span><em class="sig-param">seq: int</em><span class="sig-paren">)</span> &#x2192; sequence_and_updates_pb2.ResponseGetDifference<a class="headerlink" href="#dialog_bot_sdk.updates.Updates.get_difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raw implementation of API schema GetDifference method, which returns updates between attribute ‘seq’ and
+current seq at server side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seq</strong> – seq value</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>GetDifferenceResponse object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.updates.Updates.get_state">
+<code class="sig-name descname">get_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#dialog_bot_sdk.updates.Updates.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current application seq number</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>seq</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.uploading">
+<span id="dialog-bot-sdk-uploading-module"></span><h2>dialog_bot_sdk.uploading module<a class="headerlink" href="#module-dialog_bot_sdk.uploading" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.uploading.Uploading">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.uploading.</code><code class="sig-name descname">Uploading</code><span class="sig-paren">(</span><em class="sig-param">internal</em>, <em class="sig-param">cert</em>, <em class="sig-param">private_key</em>, <em class="sig-param">access_dir</em>, <em class="sig-param">parallelism=10</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.uploading.Uploading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for high-level file uploading interface.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.uploading.Uploading.upload_file">
+<code class="sig-name descname">upload_file</code><span class="sig-paren">(</span><em class="sig-param">file: str</em>, <em class="sig-param">max_chunk_size: int = 1048576</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.uploading.Uploading.upload_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload file for sending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> – path to file</p></li>
+<li><p><strong>max_chunk_size</strong> – maximum size of one chunk (default 1024 * 1024)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FileLocation object if success or None otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.users">
+<span id="dialog-bot-sdk-users-module"></span><h2>dialog_bot_sdk.users module<a class="headerlink" href="#module-dialog_bot_sdk.users" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.users.Users">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.users.</code><code class="sig-name descname">Users</code><span class="sig-paren">(</span><em class="sig-param">manager: dialog_bot_sdk.entity_manager.EntityManager</em>, <em class="sig-param">internal: dialog_bot_sdk.internal.bot.InternalBot</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.users.Users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#dialog_bot_sdk.service.ManagedService" title="dialog_bot_sdk.service.ManagedService"><code class="xref py py-class docutils literal notranslate"><span class="pre">dialog_bot_sdk.service.ManagedService</span></code></a></p>
+<p>Class for handling users</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.users.Users.get_full_profile_by_id">
+<code class="sig-name descname">get_full_profile_by_id</code><span class="sig-paren">(</span><em class="sig-param">id: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.users.Users.get_full_profile_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns FullUser by user nick</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – user’s id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FullUser</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.users.Users.get_full_profile_by_nick">
+<code class="sig-name descname">get_full_profile_by_nick</code><span class="sig-paren">(</span><em class="sig-param">nick: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.users.Users.get_full_profile_by_nick" title="Permalink to this definition">¶</a></dt>
+<dd><p>return FullUser profile by nickname</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nick</strong> – user’s nickname</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FullUser</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.users.Users.get_user_by_id">
+<code class="sig-name descname">get_user_by_id</code><span class="sig-paren">(</span><em class="sig-param">user_id: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.users.Users.get_user_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>return User by user id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user_id</strong> – user’s id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>User or None if not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.users.Users.get_user_by_nick">
+<code class="sig-name descname">get_user_by_nick</code><span class="sig-paren">(</span><em class="sig-param">nick: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dialog_bot_sdk.users.Users.get_user_by_nick" title="Permalink to this definition">¶</a></dt>
+<dd><p>return User by nickname</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nick</strong> – user’s nickname</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>User</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.users.Users.search_users_by_nick_substring">
+<code class="sig-name descname">search_users_by_nick_substring</code><span class="sig-paren">(</span><em class="sig-param">query: str</em><span class="sig-paren">)</span> &#x2192; List[dialog_bot_sdk.entities.User.User]<a class="headerlink" href="#dialog_bot_sdk.users.Users.search_users_by_nick_substring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of User objects by substring of nickname (not complete coincidence!)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> – user’s nickname</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of Users</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.utils">
+<span id="dialog-bot-sdk-utils-module"></span><h2>dialog_bot_sdk.utils module<a class="headerlink" href="#module-dialog_bot_sdk.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dialog_bot_sdk">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dialog_bot_sdk" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">dialog-bot-sdk</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dialog_bot_sdk.content.html">dialog_bot_sdk.content package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dialog_bot_sdk.internal.html">dialog_bot_sdk.internal package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">dialog_bot_sdk package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.bot">dialog_bot_sdk.bot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.entity_manager">dialog_bot_sdk.entity_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.groups">dialog_bot_sdk.groups module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.interactive_media">dialog_bot_sdk.interactive_media module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.messaging">dialog_bot_sdk.messaging module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.service">dialog_bot_sdk.service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.updates">dialog_bot_sdk.updates module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.uploading">dialog_bot_sdk.uploading module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.users">dialog_bot_sdk.users module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.utils">dialog_bot_sdk.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dialog_bot_sdk</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">dialog_bot_sdk package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="dialog_bot_sdk.internal.html" title="previous chapter">dialog_bot_sdk.internal package</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">dialog_bot_sdk</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Dmitry Borodkin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dialog_bot_sdk.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

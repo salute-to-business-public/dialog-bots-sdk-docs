@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>dialog_bot_sdk.internal package &#8212; dialog-bot-sdk 3.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dialog_bot_sdk package" href="dialog_bot_sdk.html" />
+    <link rel="prev" title="dialog_bot_sdk.content package" href="dialog_bot_sdk.content.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dialog-bot-sdk-internal-package">
+<h1>dialog_bot_sdk.internal package<a class="headerlink" href="#dialog-bot-sdk-internal-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dialog_bot_sdk.internal.bot">
+<span id="dialog-bot-sdk-internal-bot-module"></span><h2>dialog_bot_sdk.internal.bot module<a class="headerlink" href="#module-dialog_bot_sdk.internal.bot" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.internal.bot.InternalBot">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.internal.bot.</code><code class="sig-name descname">InternalBot</code><span class="sig-paren">(</span><em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">cert=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">access_dir=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.internal.bot.InternalBot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class with Dialog bot’s internal services.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.internal.bot.InternalBot.anonymous_authorize">
+<code class="sig-name descname">anonymous_authorize</code><span class="sig-paren">(</span><em class="sig-param">name='dumb'</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.internal.bot.InternalBot.anonymous_authorize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.internal.bot.InternalBot.authorize">
+<code class="sig-name descname">authorize</code><span class="sig-paren">(</span><em class="sig-param">bot_token</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.internal.bot.InternalBot.authorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Authorization function for Internal bot instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bot_token</strong> – bot token</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>auth token (instance of gRPC RequestStartTokenAuth)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.internal.bot.InternalBot.get_session_token">
+<code class="sig-name descname">get_session_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.internal.bot.InternalBot.get_session_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requests for sessions token for device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>session token</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="dialog_bot_sdk.internal.bot.InternalBot.wrap_service">
+<code class="sig-name descname">wrap_service</code><span class="sig-paren">(</span><em class="sig-param">stub_func</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.internal.bot.InternalBot.wrap_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for authenticating of gRPC service calls.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – retries options</p></li>
+<li><p><strong>stub_func</strong> – name of gRPC service</p></li>
+<li><p><strong>verbose</strong> – verbosity level of functions calling</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>wrapped gRPC service</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.internal.service">
+<span id="dialog-bot-sdk-internal-service-module"></span><h2>dialog_bot_sdk.internal.service module<a class="headerlink" href="#module-dialog_bot_sdk.internal.service" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="dialog_bot_sdk.internal.service.AuthenticatedService">
+<em class="property">class </em><code class="sig-prename descclassname">dialog_bot_sdk.internal.service.</code><code class="sig-name descname">AuthenticatedService</code><span class="sig-paren">(</span><em class="sig-param">auth_token_func</em>, <em class="sig-param">stub</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.internal.service.AuthenticatedService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Initialization class for gRPC services.</p>
+<dl class="method">
+<dt id="dialog_bot_sdk.internal.service.AuthenticatedService.parse_options">
+<em class="property">static </em><code class="sig-name descname">parse_options</code><span class="sig-paren">(</span><em class="sig-param">options</em><span class="sig-paren">)</span><a class="headerlink" href="#dialog_bot_sdk.internal.service.AuthenticatedService.parse_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dialog_bot_sdk.internal">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dialog_bot_sdk.internal" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">dialog-bot-sdk</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dialog_bot_sdk.content.html">dialog_bot_sdk.content package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">dialog_bot_sdk.internal package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.internal.bot">dialog_bot_sdk.internal.bot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.internal.service">dialog_bot_sdk.internal.service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-dialog_bot_sdk.internal">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dialog_bot_sdk.html">dialog_bot_sdk package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">dialog_bot_sdk</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="dialog_bot_sdk.content.html" title="previous chapter">dialog_bot_sdk.content package</a></li>
+      <li>Next: <a href="dialog_bot_sdk.html" title="next chapter">dialog_bot_sdk package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Dmitry Borodkin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dialog_bot_sdk.internal.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

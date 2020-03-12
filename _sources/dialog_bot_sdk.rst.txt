@@ -1,0 +1,102 @@
+dialog\_bot\_sdk package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   dialog_bot_sdk.content
+   dialog_bot_sdk.internal
+
+Submodules
+----------
+
+dialog\_bot\_sdk.bot module
+---------------------------
+
+.. automodule:: dialog_bot_sdk.bot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.entity\_manager module
+---------------------------------------
+
+.. automodule:: dialog_bot_sdk.entity_manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.groups module
+------------------------------
+
+.. automodule:: dialog_bot_sdk.groups
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.interactive\_media module
+------------------------------------------
+
+.. automodule:: dialog_bot_sdk.interactive_media
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.messaging module
+---------------------------------
+
+.. automodule:: dialog_bot_sdk.messaging
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.service module
+-------------------------------
+
+.. automodule:: dialog_bot_sdk.service
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.updates module
+-------------------------------
+
+.. automodule:: dialog_bot_sdk.updates
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.uploading module
+---------------------------------
+
+.. automodule:: dialog_bot_sdk.uploading
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.users module
+-----------------------------
+
+.. automodule:: dialog_bot_sdk.users
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dialog\_bot\_sdk.utils module
+-----------------------------
+
+.. automodule:: dialog_bot_sdk.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: dialog_bot_sdk
+   :members:
+   :undoc-members:
+   :show-inheritance:
