@@ -1,4 +1,7 @@
 Usage
+-----
+
+```python
 from dialog_bot_sdk.bot import DialogBot
 import grpc
 import os
